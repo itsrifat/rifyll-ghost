@@ -1,0 +1,41 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+
+<main class="content" role="main">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+            {{#author}}
+            <header class="page-header">
+                <div class="row">
+                    <div class="col-lg-2">
+                        {{#if image}}
+                            <img src="{{image}}" alt="Yet Another Demo Blog" class="pull-left img-responsive thumb margin10 img-thumbnail author-thumbnail">
+                        {{else}}
+                            <img src="http://api.adorable.io/avatars/285/abott@adorable.png" alt="Yet Another Demo Blog" 
+                            class="pull-left img-responsive thumb margin10 img-thumbnail author-thumbnail">
+                        {{/if}}
+                    </div>
+                    <div class="col-lg-10 left-align">
+                        <h1 class="page-title">{{ name }}</h1>
+                        <h4>{{bio}}</h4>
+                        <p>
+                            {{#if location}}<i class="fa fa-map-marker"></i><span class=""> {{location}} </span>{{/if}}
+                            {{#if website}}<i class="fa fa-globe"></i></i><span class=""><a href="{{website}}"> {{website}} </a></span>{{/if}}
+                        </p>
+                        
+                        <p>
+                            <span class="author-stats"><i class="icon-stats"></i> 
+                                {{name}} has {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </header>
+            {{/author}}
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> "loop"}}
+        </div>
+    </div>
+</main>

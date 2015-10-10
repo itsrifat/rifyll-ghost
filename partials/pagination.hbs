@@ -1,0 +1,13 @@
+<nav class="pagination" role="pagination">
+    {{#if prev}}
+        <a class="newer-posts" href="{{pageUrl prev}}"><i class="fa fa-arrow-left"></i></a>
+    {{/if}}
+   <span class="page-number">Page {{page}} of {{pages}}</span>
+    {{#if next}}
+        <a class="older-posts" href="{{pageUrl next}}"><i class="fa fa-arrow-right"></i></a>
+    {{/if}}
+</nav>
+
+{{#foreach pages}}
+  
+{{/foreach}}

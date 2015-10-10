@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+    <div class="page">
+
+      <header class="page-header">
+        <h1 class="page-title">{{ title }}</h1>
+        
+        <small> <i class="fa fa-calendar"></i>
+          <time>
+             {{ date format='DD MMMM YYYY' }}
+          </time>
+        </small>
+      </header>
+
+      <article class="page-content">
+        {{ content }}
+      </article>
+    </div>
+  </div>
+</div>
+{{/post}}

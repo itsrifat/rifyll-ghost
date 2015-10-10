@@ -1,0 +1,41 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+
+ 
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+    <div class="blog-short">
+    <h3><a href="{{url}}">{{title}}</a></h3>
+    <div>
+      <small>
+        <i class="fa fa-calendar"></i>
+        <time>
+    {{ date format='DD MMMM YYYY' }}
+        </time>
+      </small>
+     </div>
+     <div class="margin10">
+        {{#if tags}}
+        <small>
+            <i class="fa fa-tag"></i>
+            {{#foreach tags }}
+              <a href="{{url}}"><span class="label label-primary">{{name}}</span></a>
+            {{/foreach}}
+        </small>
+        {{/if}}
+     </div>
+    {{#if image }}
+          <div class="post-thumbnail">
+              <img src="{{image}}"
+              alt="{{title}}"  class="pull-left img-responsive thumb margin10 img-thumbnail" />              
+          </div>
+
+    {{/if}}
+    <article class="excerpt">{{excerpt words="200"}}</article>
+    <a class="pull-right marginBottom10" href="{{url}}">Read More</a>
+    </div>
+
+{{/foreach}}
+{{pagination}}
+{{! Previous/next page links - displayed on every page }}
+

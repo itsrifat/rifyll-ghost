@@ -119,3 +119,7 @@ body {
 .left-align{
   text-align: left;
 }
+
+.page-content img{
+  max-width: 100%;
+}

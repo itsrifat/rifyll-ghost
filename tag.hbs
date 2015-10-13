@@ -7,13 +7,14 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
             <header class="page-header">
-                <h1 class="page-title"><i class="fa fa-tag"></i> {{ tag.name }}</h1>
+                <h3 class="page-title"><i class="fa fa-tag"></i> {{ tag.name }}</h3>
                 {{#if tag.description}}
-                    <h4>{{tag.description}}</h4>
+                    <p>{{tag.description}}</p>
                 {{/if}}
             </header>
             {{! The tag below includes the post loop - partials/loop.hbs }}
             {{> "loop"}}
         </div>
     </div>
+
 </main>

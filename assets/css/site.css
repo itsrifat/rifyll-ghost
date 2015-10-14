@@ -3,6 +3,7 @@
 /* global settings */
 body {
   font-family: 'Lato', 'sans-serif';
+  text-rendering: optimizeLegibility;
   padding-bottom:60px;
   padding-top:60px;
 }
@@ -122,4 +123,8 @@ body {
 
 .page-content img{
   max-width: 100%;
+}
+
+.container{
+  font-size: 1.2em;
 }

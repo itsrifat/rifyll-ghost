@@ -5,14 +5,9 @@ body {
   font-family: 'Lato', 'sans-serif';
   text-rendering: optimizeLegibility;
   padding-bottom:60px;
-  padding-top:60px;
+  padding-top:50px;
 }
 
-@media (max-width: 992px) {
-  body {
-    padding-bottom: 120px;
-  }
-}
 
 .page-header{
   margin: 10px 0;
@@ -25,10 +20,13 @@ body {
 
 
 /*navbar stuff*/
-.name-holder{
-  padding:10px;
+
+#site-title{
+  line-height: 50px;
   color: #002E62;
+  font-weight: bold;
 }
+
 
 
 /*Primary navigation bar*/
@@ -37,7 +35,7 @@ body {
   padding: 0px;
 }
 .navbar .navbar-brand img {
-  width: 50px;
+  height: 50px;
 }
 
 .navbar-right li{
@@ -127,4 +125,26 @@ body {
 
 .container{
   font-size: 1.2em;
+}
+
+.blog-header{
+  background-color: #f8f8f8;
+}
+.blog-header h1{
+  font-weight: bold;
+  color: #002e62;
+}
+
+#content h1,h2,h3,h4,h5,h6{
+    color: #002e62;
+}
+a{
+ color: #002e62;
+}
+#main-menu a{
+  color:#002e62;
+}
+
+.label-tag{
+  background-color: #002e62;
 }

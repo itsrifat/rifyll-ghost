@@ -9,11 +9,12 @@
           <span class="icon-bar"></span>
         </button>
         
-        <a class="navbar-brand" href="{{ @blog.url }}">
+          
+        <a id="site-title" class="navbar-brand" href="{{ @blog.url }}">
           {{#if @blog.logo}}
-            <img alt="{{@blog.title}}" src="{{@blog.logo}}">
+            <img class="img-responsive pull-left" alt="{{@blog.title}}" src="{{@blog.logo}}">
           {{/if}}
-          <span class="name-holder">{{ @blog.title }}</span>
+          {{ @blog.title}}
         </a>
         
       </div>

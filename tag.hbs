@@ -2,19 +2,19 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The main content area on the homepage }}
-<main class="content" role="main">
-    
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-            <header class="page-header">
-                <h3 class="page-title"><i class="fa fa-tag"></i> {{ tag.name }}</h3>
-                {{#if tag.description}}
-                    <p>{{tag.description}}</p>
-                {{/if}}
-            </header>
-            {{! The tag below includes the post loop - partials/loop.hbs }}
-            {{> "loop"}}
+<div class="container">
+    <main class="content" role="main">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                <header class="page-header">
+                    <h3 class="page-title"><i class="fa fa-tag"></i> {{ tag.name }}</h3>
+                    {{#if tag.description}}
+                        <p>{{tag.description}}</p>
+                    {{/if}}
+                </header>
+                {{! The tag below includes the post loop - partials/loop.hbs }}
+                {{> "loop"}}
+            </div>
         </div>
-    </div>
-
-</main>
+    </main>
+</div>

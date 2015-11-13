@@ -22,7 +22,6 @@
                             <img src="{{image}}" alt="{{name}}" class="pull-left img-responsive thumb margin10 img-thumbnail author-thumbnail">
                           {{/if}}
                         </div>
-                        {{ name }}
                       </a>
                   </div>
                 {{/author}}
@@ -30,6 +29,11 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="post-metadata">
+                    {{#author}}
+                    <div>
+                      <a href="{{url}}"> {{ name }} </a>
+                    </div>
+                    {{/author}}
                     <div> 
                       <i class="fa fa-calendar-o"></i>
                       <small><time>
